@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Facts</title>
+  <link rel="stylesheet" href="..\static\css_catfact.css">
+</head>
+<body>
+<div class="container">
+   <button onclick="getFact()">Cat Facts</button>
+   <p id="fact"></p>
+</div>
+
+
+<script>
+  function getFact() {
+    fetch("/get-data")     // prendre l'information voulue
+    .then(fact => fact.json())      // la transformer en format json
+    .then(data => document.getElementById("fact").innerHTML = data.fact)      // afficher le fact
+    // .then(function () {
+    //   data = fact.json()
+    //   document.getElementById("fact").innerHTML = data.fact
+    // })
+  }
+</script>
+
+
+</body>
+</html>

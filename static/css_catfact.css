@@ -1,0 +1,71 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteneur */
+.container {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+}
+
+/* Bouton */
+button {
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(255, 122, 24, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 122, 24, 0.5);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Texte du fact */
+#fact {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
