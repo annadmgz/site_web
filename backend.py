@@ -17,7 +17,7 @@ def get_data():       #sert à envoyer des données
       print(f"Le contenu de data est : {data}")
       return jsonify(data)    #JSP
 
-
+# Mon commentaire de test pour git
 
 #POKEMON
 @site.route("/pokemon")
